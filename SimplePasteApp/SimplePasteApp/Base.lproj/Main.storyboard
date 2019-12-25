@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimplePasteApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rSO-Xb-lcc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQX-El-U5R">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem systemItem="trash" id="oNC-WZ-CSJ">
+                                        <connections>
+                                            <action selector="trashButttonPressed:" destination="BYZ-38-t0r" id="ZJO-u6-j6g"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rSO-Xb-lcc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="S5G-Mf-3A8"/>
+                            <constraint firstItem="FQX-El-U5R" firstAttribute="top" secondItem="rSO-Xb-lcc" secondAttribute="bottom" id="cfw-6T-h1p"/>
+                            <constraint firstItem="FQX-El-U5R" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ti1-ln-x58"/>
+                            <constraint firstItem="FQX-El-U5R" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="uK6-d3-CuP"/>
+                            <constraint firstItem="rSO-Xb-lcc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ueT-LB-YMV"/>
+                            <constraint firstItem="rSO-Xb-lcc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xzW-ky-wZH"/>
+                            <constraint firstItem="FQX-El-U5R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yZq-Za-DXI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="rSO-Xb-lcc" id="jPW-Ba-hpf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
