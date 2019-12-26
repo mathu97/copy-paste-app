@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+	
+	let DATA_KEY = "data_key"
+	
 	@IBOutlet weak var textView: UITextView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		if let loadedStrings = UserDefaults.standard.stringArray(forKey: DATA_KEY) {
+			pastedStrings.append(contentsOf: loadedStrings)
+		}
 		showText()
 	}
 	
@@ -26,6 +32,7 @@ class ViewController: UIViewController {
 			return
 		}
 		pastedStrings.append(text)
+		UserDefaults.standard.set(pastedStrings, forKey: DATA_KEY)
 		showText()
 	}
 	
@@ -37,6 +44,9 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func trashButttonPressed(_ sender: Any) {
+		pastedStrings.removeAll()
+		textView.text = ""
+		UserDefaults.standard.removeObject(forKey: DATA_KEY)
 		
 	}
 
